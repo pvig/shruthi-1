@@ -2,3 +2,23 @@ Shruthi-1 Fork based on YAM
 
 1st goal of this fork is to modify raga code to remove silences in ragas definition, i prefer to use unisons instead (slightly detuned).
 
+
+
+
+
+
+This repository was originally a copy of the Mutable Instruments GitHub Shruthi-1 repository at https://github.com/pichenettes/shruthi-1
+
+Original developer: Olivier Gillet (ol.gillet@gmail.com)
+
+The firmware is released under a GPL3.0 license. It includes a
+reimplementation of the formant synthesis algorithm used in Peter Knight's
+Cantarino speech synthesizer.
+
+The PCB layouts and schematics (in /hardware/shruthi/design/pcb)
+are released under a Creative Commons cc-by-sa 3.0 license - except for some
+discontinued filter boards which were released under a cc-by-nc-sa 3.0 license.
+
+Documentation, analyses, simulations and 3D models are released under a
+Creative Commons cc-by-sa 3.0 license.
+
