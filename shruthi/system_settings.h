@@ -41,7 +41,7 @@ class SystemSettings {
   uint8_t expansion_filter_board;
   uint8_t programmer;
   uint8_t display_snap;
-
+  
   uint16_t last_patch;
   uint8_t padding;
   

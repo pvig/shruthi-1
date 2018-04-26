@@ -213,7 +213,7 @@ static const prog_char init_system_settings[] PROGMEM = {
     0, 0, 0, 0,
     0, 1, 1, 0,
     8, 0, 0, 0,
-    0, 0, 0,
+    0, 0, 0, 
 };
 
 /* static */
