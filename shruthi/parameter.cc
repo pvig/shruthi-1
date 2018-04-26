@@ -547,12 +547,12 @@ static const prog_Parameter parameters[kNumParameters] PROGMEM = {
     STR_RES_DIVISION, STR_RES_DIVISION }, 
 
   // 44
-  { PRM_SYS_OCTAVE,
-    UNIT_INT8,
-    -2, +2,
-    { 82, 0 },
-    STR_RES_OCTAVE, STR_RES_OCTAVE }, 
-
+  { PRM_SYS_RAGA_KEY,
+    UNIT_UINT8,
+    0, 11,
+    { 83, 0 },
+    STR_RES_KEYBOARD, STR_RES_RAGA }, 
+    
   // 45
   { PRM_SYS_RAGA,
     UNIT_RAGA,
@@ -594,13 +594,13 @@ static const prog_Parameter parameters[kNumParameters] PROGMEM = {
     MIDI_OUT_OFF, MIDI_OUT_8_7,
     { 0, 0 },
     STR_RES_MIDI_OUT, STR_RES_MIDI_OUT }, 
-
+    
   // 51
-  { PRM_SYS_MIDI_OUT_MODE,
-    UNIT_MIDI_MODE,
-    MIDI_OUT_OFF, MIDI_OUT_8_7,
-    { 0, 0 },
-    STR_RES_MIDI_OUT, STR_RES_MIDI_OUT },
+  { PRM_SYS_OCTAVE,
+    UNIT_INT8,
+    -2, +2,
+    { 82, 0 },
+    STR_RES_OCTAVE, STR_RES_OCTAVE }, 
 
   // 52
   { PRM_SYS_DISPLAY_DELAY,
@@ -867,6 +867,7 @@ static const prog_Parameter parameters[kNumParameters] PROGMEM = {
     0, 127,
     { 12, 0 },
     STR_RES_FDB, STR_RES_FEEDBACK }, 
+
 };
 
 /* static */

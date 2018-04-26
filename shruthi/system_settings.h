@@ -28,6 +28,7 @@ class SystemSettings {
  public:
   int8_t octave;
   uint8_t raga;
+  uint8_t raga_key;
   uint8_t portamento;
   uint8_t legato;
 
@@ -91,6 +92,7 @@ enum START_PAGE {
 enum SystemParameter {
   PRM_SYS_OCTAVE = sizeof(Patch) + sizeof(SequencerSettings),
   PRM_SYS_RAGA,
+  PRM_SYS_RAGA_KEY,
   PRM_SYS_PORTAMENTO,
   PRM_SYS_LEGATO,
 
