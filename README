@@ -1,10 +1,8 @@
 Shruthi-1 Fork based on YAM
 
 Ragas py code modified to remove silences in ragas definition, i prefer to use unisons instead.
-add new raga key parameter in keyboard options menu : raga_key to allow raga shift by 0..11 semi tone 
+added new raga key parameter in keyboard options menu : raga_key to allow raga shift by 0..11 semi tone 
 
-
-TODO : change unison pitch slightly
 
 This repository was originally a copy of the Mutable Instruments GitHub Shruthi-1 repository at https://github.com/pichenettes/shruthi-1
 
