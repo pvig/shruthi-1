@@ -20,6 +20,7 @@
 # Lookup table definitions.
 
 import numpy
+from collections import defaultdict
 
 """----------------------------------------------------------------------------
 LFO and envelope increments.
@@ -223,20 +224,37 @@ shruti_dictionary = {}
 for entry in shrutis:
   for name in entry[:-1]:
     shruti_dictionary[name] = entry[-1]
+   
 
+def times_so_far(list_):
+    counted = defaultdict(int)
+    for v in list_:
+        counted[v] += 1
+        yield counted[v]
 
 def Compute(scale):
   """Translate a list of 12 note/swaras names into pitch corrections."""
   values = [shruti_dictionary.get(x) for x in scale.split(' ')]
   equal = 2 ** (numpy.arange(12.0) / 12.0)
   shifts = (numpy.log2(values / equal) * 12 * 128).astype(int)
-  silences = numpy.where(shifts > 127)
-  if len(silences[0]):
-    shifts[silences[0]] = 32767
+  usages = list(times_so_far(values))
+  #print(shifts)
+  #print(usages)
+  #print("--------------------------------")
+  
+  unison_detune = [8, -8, 12, -12, 15]
+  unison_detune_index = 0
+	
+  for i in range(len(shifts)):
+	if usages[i] > 1:
+		shifts[i] += unison_detune[unison_detune_index]
+		unison_detune_index = (unison_detune_index+1)%len(unison_detune)
+	else:
+		unison_detune_index = 0
   return shifts
 
 
-def LayoutRaga(raga, silence_other_notes=False):
+def LayoutRaga(raga, unison_other_notes=False):
   """Find a good assignments of swaras to keys for a raga."""
   raga = raga.lower()
   scale = numpy.zeros((12,))
@@ -248,8 +266,8 @@ def LayoutRaga(raga, silence_other_notes=False):
   # Fill unassigned notes
   for i, n in enumerate(mapping):
     if n == '':
-      if silence_other_notes:
-        mapping[i] = '!'
+      if unison_other_notes:
+        mapping[i] = mapping[i-1]
       else:
         candidates = []
         for swara, key in recommended_keys.items():
