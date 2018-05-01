@@ -28,7 +28,6 @@ class SystemSettings {
  public:
   int8_t octave;
   uint8_t raga;
-  uint8_t raga_key;
   uint8_t portamento;
   uint8_t legato;
 
@@ -41,9 +40,9 @@ class SystemSettings {
   uint8_t expansion_filter_board;
   uint8_t programmer;
   uint8_t display_snap;
-  
+  uint8_t raga_key;
+	
   uint16_t last_patch;
-  uint8_t padding;
   
   void EepromSave() const;
   uint8_t EepromLoad();
@@ -92,7 +91,6 @@ enum START_PAGE {
 enum SystemParameter {
   PRM_SYS_OCTAVE = sizeof(Patch) + sizeof(SequencerSettings),
   PRM_SYS_RAGA,
-  PRM_SYS_RAGA_KEY,
   PRM_SYS_PORTAMENTO,
   PRM_SYS_LEGATO,
 
@@ -104,7 +102,8 @@ enum SystemParameter {
   PRM_SYS_DISPLAY_DELAY,
   PRM_SYS_EXPANSION_FILTER_BOARD,
   PRM_SYS_PROGRAMMER,
-  PRM_SYS_DISPLAY_SNAP
+  PRM_SYS_DISPLAY_SNAP,
+  PRM_SYS_RAGA_KEY
 };
 
 }  // namespace shruthi
