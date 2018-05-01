@@ -238,9 +238,6 @@ def Compute(scale):
   equal = 2 ** (numpy.arange(12.0) / 12.0)
   shifts = (numpy.log2(values / equal) * 12 * 128).astype(int)
   usages = list(times_so_far(values))
-  #print(shifts)
-  #print(usages)
-  #print("--------------------------------")
   
   unison_detune = [8, -8, 12, -12, 15]
   unison_detune_index = 0
