@@ -872,6 +872,14 @@ void Part::ReleaseLatchedNotes() {
 /* static */
 uint16_t Part::Tune(uint8_t note) {
   if (system_settings_.raga) {
+	
+	if ( part.system_settings_.raga==33) {
+		//scala tuning
+		return ResourcesManager::Lookup<int16_t, uint8_t>(
+        ResourceId(LUT_RES_SCALA_MAP),
+        (note + part.system_settings_.raga_key) % 128);
+	}
+	
     int16_t pitch_shift = ResourcesManager::Lookup<int16_t, uint8_t>(
         ResourceId(LUT_RES_SCALE_JUST + part.system_settings_.raga - 1),
         (note + part.system_settings_.raga_key) % 12);

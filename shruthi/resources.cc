@@ -452,6 +452,7 @@ static const prog_char str_res_chandr[] PROGMEM = "chandr";
 static const prog_char str_res_kaushi[] PROGMEM = "kaushi";
 static const prog_char str_res_jogesh[] PROGMEM = "jogesh";
 static const prog_char str_res_rasia[] PROGMEM = "rasia";
+static const prog_char str_res_scala[] PROGMEM = "scala";
 
 
 PROGMEM const prog_char* const string_table[] = {
@@ -912,6 +913,7 @@ PROGMEM const prog_char* const string_table[] = {
   str_res_kaushi,
   str_res_jogesh,
   str_res_rasia,
+  str_res_scala,
 };
 
 const prog_uint16_t lut_res_lfo_increments[] PROGMEM = {
@@ -992,104 +994,104 @@ const prog_uint16_t lut_res_scale_1_4_ea[] PROGMEM = {
        0,    -64,      0,      0,
 };
 const prog_uint16_t lut_res_scale_bhairav[] PROGMEM = {
-       0,    -12,   -132,   -276,    -17,     -2,   -122,      2,
-     -10,   -130,   -274,    -15,
+       0,    -12,   -134,   -256,    -17,     -2,   -124,      2,
+     -10,   -132,   -254,    -15,
 };
 const prog_uint16_t lut_res_scale_gunakri[] PROGMEM = {
-       0,     15,   -104,   -248,   -356,     -2,   -122,      2,
-      17,   -102,   -246,   -354,
+       0,     15,   -106,   -228,   -350,     -2,   -124,      2,
+      17,   -104,   -226,   -348,
 };
 const prog_uint16_t lut_res_scale_marwa[] PROGMEM = {
-       0,     15,   -104,   -248,    -17,   -137,    -12,   -132,
-    -276,    -20,   -140,    -15,
+       0,     15,   -106,   -228,    -17,   -139,    -12,   -134,
+    -256,    -20,   -142,    -15,
 };
 const prog_uint16_t lut_res_scale_shree[] PROGMEM = {
-       0,    -12,   -132,   -276,    -17,   -137,    -12,      2,
-     -10,   -130,   -274,    -15,
+       0,    -12,   -134,   -256,    -17,   -139,    -12,      2,
+     -10,   -132,   -254,    -15,
 };
 const prog_uint16_t lut_res_scale_purvi[] PROGMEM = {
-       0,     15,   -104,   -248,    -17,   -137,    -12,      2,
-      17,   -102,   -246,    -15,
+       0,     15,   -106,   -228,    -17,   -139,    -12,      2,
+      17,   -104,   -226,    -15,
 };
 const prog_uint16_t lut_res_scale_bilawal[] PROGMEM = {
-       0,   -120,      5,   -114,    -17,     -2,   -122,      2,
-    -117,      7,   -112,    -15,
+       0,   -122,      5,   -116,    -17,     -2,   -124,      2,
+    -119,      7,   -114,    -15,
 };
 const prog_uint16_t lut_res_scale_yaman[] PROGMEM = {
-       0,   -120,      5,   -114,     10,   -109,     15,      2,
-    -117,      7,   -112,     12,
+       0,   -122,      5,   -116,     10,   -111,     15,      2,
+    -119,      7,   -114,     12,
 };
 const prog_uint16_t lut_res_scale_kafi[] PROGMEM = {
-       0,   -120,    -22,     -7,   -127,     -2,   -122,      2,
-    -117,    -20,     -5,   -125,
+       0,   -122,    -22,     -7,   -129,     -2,   -124,      2,
+    -119,    -20,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_bhimpalasree[] PROGMEM = {
-       0,   -120,      5,     20,    -99,     -2,   -122,      2,
-    -117,      7,     22,    -97,
+       0,   -122,      5,     20,   -101,     -2,   -124,      2,
+    -119,      7,     22,    -99,
 };
 const prog_uint16_t lut_res_scale_darbari[] PROGMEM = {
-       0,   -120,      5,     -7,   -127,     -2,   -122,      2,
-     -10,   -130,     -5,   -125,
+       0,   -122,      5,     -7,   -129,     -2,   -124,      2,
+     -10,   -132,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_rageshree[] PROGMEM = {
-       0,   -120,      5,   -114,    -17,     -2,   -122,      2,
-    -117,    -20,     -5,   -125,
+       0,   -122,      5,   -116,    -17,     -2,   -124,      2,
+    -119,    -20,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_khamaj[] PROGMEM = {
-       0,   -120,      5,   -114,    -17,     -2,   -122,      2,
-    -117,      7,     -5,     12,
+       0,   -122,      5,   -116,    -17,     -2,   -124,      2,
+    -119,      7,     -5,     12,
 };
 const prog_uint16_t lut_res_scale_mimal[] PROGMEM = {
-       0,   -120,      5,     -7,   -127,     -2,   -122,      2,
-    -117,    -20,     -5,    -15,
+       0,   -122,      5,     -7,   -129,     -2,   -124,      2,
+    -119,    -20,     -5,    -15,
 };
 const prog_uint16_t lut_res_scale_parameshwari[] PROGMEM = {
-       0,    -12,   -132,     -7,   -127,     -2,   -122,   -266,
-    -374,    -20,     -5,   -125,
+       0,    -12,   -134,     -7,   -129,     -2,   -124,   -246,
+    -368,    -20,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_rangeshwari[] PROGMEM = {
-       0,   -120,      5,     -7,   -127,     -2,   -122,      2,
-    -117,   -261,   -369,    -15,
+       0,   -122,      5,     -7,   -129,     -2,   -124,      2,
+    -119,   -241,   -363,    -15,
 };
 const prog_uint16_t lut_res_scale_gangeshwari[] PROGMEM = {
-       0,   -120,   -264,   -371,    -17,     -2,   -122,      2,
-     -10,   -130,     -5,   -125,
+       0,   -122,   -244,   -365,    -17,     -2,   -124,      2,
+     -10,   -132,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_kameshwari[] PROGMEM = {
-       0,   -120,      5,   -114,   -258,   -366,    -12,      2,
-    -117,    -20,     -5,   -125,
+       0,   -122,      5,   -116,   -238,   -360,    -12,      2,
+    -119,    -20,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_palas_kafi[] PROGMEM = {
-       0,   -120,      5,     -7,   -127,     -2,   -122,      2,
-    -117,      7,     -5,   -125,
+       0,   -122,      5,     -7,   -129,     -2,   -124,      2,
+    -119,      7,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_natbhairav[] PROGMEM = {
-       0,   -120,      5,   -114,    -17,     -2,   -122,      2,
-     -10,   -130,   -274,    -15,
+       0,   -122,      5,   -116,    -17,     -2,   -124,      2,
+     -10,   -132,   -254,    -15,
 };
 const prog_uint16_t lut_res_scale_m_kauns[] PROGMEM = {
-       0,   -120,      5,   -114,     10,     -2,   -122,   -266,
-     -10,   -130,     -5,   -125,
+       0,   -122,      5,   -116,     10,     -2,   -124,   -246,
+     -10,   -132,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_bairagi[] PROGMEM = {
-       0,    -12,   -132,   -276,   -384,     -2,   -122,      2,
-    -117,   -261,     -5,   -125,
+       0,    -12,   -134,   -256,   -378,     -2,   -124,      2,
+    -119,   -241,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_b_todi[] PROGMEM = {
-       0,    -12,   -132,     -7,   -127,   -271,   -379,      2,
-    -117,   -261,     -5,   -125,
+       0,    -12,   -134,     -7,   -129,   -251,   -373,      2,
+    -119,   -241,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_chandradeep[] PROGMEM = {
-       0,   -120,   -264,     -7,   -127,     -2,   -122,      2,
-    -117,   -261,     -5,   -125,
+       0,   -122,   -244,     -7,   -129,     -2,   -124,      2,
+    -119,   -241,     -5,   -127,
 };
 const prog_uint16_t lut_res_scale_kaushik_todi[] PROGMEM = {
-       0,   -120,   -264,     -7,   -127,     -2,    -12,   -132,
-     -10,   -130,   -274,   -382,
+       0,   -122,   -244,     -7,   -129,     -2,    -12,   -134,
+     -10,   -132,   -254,   -376,
 };
 const prog_uint16_t lut_res_scale_jogeshwari[] PROGMEM = {
-       0,   -120,   -264,     -7,    -17,     -2,   -122,   -266,
-    -374,    -20,     -5,   -125,
+       0,   -122,   -244,     -7,    -17,     -2,   -124,   -246,
+    -368,    -20,     -5,   -127,
 };
 const prog_uint16_t lut_res_arpeggiator_patterns[] PROGMEM = {
    21845,  30583,  62965,  46517,  28527,   2313,  18761,  21065,
@@ -1118,6 +1120,24 @@ const prog_uint16_t lut_res_groove_human[] PROGMEM = {
 const prog_uint16_t lut_res_groove_monkey[] PROGMEM = {
       70,    -84,     84,   -112,     84,    -98,    112,    -98,
       54,    -70,    127,    -84,    127,   -112,     84,    -84,
+};
+const prog_uint16_t lut_res_scala_map[] PROGMEM = {
+    7680,    491,   3088,   3131,   4224,   4506,   4516,   4754,
+    4868,   5132,   5511,   5652,   5760,   5776,   6402,   6412,
+    6757,   7191,   7305,   7696,   7931,   8283,   8594,   8655,
+    8672,   8681,   8694,   8706,   8711,   8727,   8832,   8864,
+    9232,   9622,   9647,   9821,  10285,  10368,  10761,  13838,
+   16152,   2134,   4624,   4667,   5760,   6042,   6052,   6290,
+    6404,   6668,   7047,   7188,   7296,   7312,   7938,   7948,
+    8293,   8727,   8841,   9232,   9467,   9819,  10130,  10191,
+   10208,  10217,  10230,  10242,  10247,  10263,  10368,  10400,
+   10768,  11158,  11183,  11357,  11821,  11904,  12297,  15374,
+   16152,   3693,   6160,   6228,   7296,   7578,   7588,   7826,
+    7940,   8204,   8583,   8724,   8832,   8848,   9474,   9484,
+    9829,  10263,  10377,  10768,  11003,  11355,  11666,  11727,
+   11744,  11753,  11766,  11778,  11783,  11799,  11904,  11936,
+   12304,  12694,  12719,  12893,  13357,  13440,  13833,  16152,
+   16152,  16152,  16152,  16152,  16152,  16152,  16152,  16152,
 };
 
 
@@ -1158,6 +1178,7 @@ PROGMEM const prog_uint16_t* const lookup_table_table[] = {
   lut_res_scale_kaushik_todi,
   lut_res_scale_jogeshwari,
   lut_res_scale_yaman,
+  lut_res_scale_just,
   lut_res_arpeggiator_patterns,
   lut_res_groove_swing,
   lut_res_groove_shuffle,
@@ -1165,6 +1186,7 @@ PROGMEM const prog_uint16_t* const lookup_table_table[] = {
   lut_res_groove_lag,
   lut_res_groove_human,
   lut_res_groove_monkey,
+  lut_res_scala_map,
 };
 
 const prog_uint32_t lut_res_tempo_phase_increment[] PROGMEM = {

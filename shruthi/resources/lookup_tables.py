@@ -239,7 +239,7 @@ def Compute(scale):
   shifts = (numpy.log2(values / equal) * 12 * 128).astype(int)
   usages = list(times_so_far(values))
   
-  unison_detune = [8, -8, 12, -12, 15]
+  unison_detune = [6, 12, 18, 24, 30]
   unison_detune_index = 0
 	
   for i in range(len(shifts)):
@@ -345,6 +345,7 @@ scales = [
      LayoutRaga(DecodeShrutiChart('s----g-g-m------d-n---'), True)),
     ('rasia',
      LayoutRaga(DecodeShrutiChart('s---r---g---mp---d---n'), True)),
+    ('scala', Compute('C C# D D# E F F# G G# A A# B')),
 ]
 
 strings = ''
@@ -442,3 +443,166 @@ tempo_values = numpy.arange(40, 241.0)
 lookup_tables32.append(
     ('tempo_phase_increment', width * tempo_values * 24 / (60 * clock_rate))
 )
+
+
+"""----------------------------------------------------------------------------
+Scala table
+----------------------------------------------------------------------------"""
+def find_nearest_index(array, value):
+    array = numpy.asarray(array)
+    idx = (numpy.abs(array - value)).argmin()
+    return idx
+	
+scalafreqs=[
+26163,
+1080,
+3300,
+3380,
+5500,
+6264,
+6300,
+7000,
+7360,
+8300,
+9840,
+10500,
+11000,
+11100,
+14700,
+14785,
+17206,
+21042,
+22123,
+26400,
+29300,
+34200,
+39600,
+40400,
+40800,
+41000,
+41300,
+41600,
+41700,
+42082,
+44000,
+44800,
+52800,
+63000,
+63900,
+68500,
+85200,
+88000,
+105200,
+422100,
+1200000,
+2160,
+6600,
+6760,
+11000,
+12528,
+12600,
+14000,
+14720,
+16600,
+19680,
+21000,
+22000,
+22200,
+29400,
+29570,
+34412,
+42084,
+44246,
+52800,
+58600,
+68400,
+79200,
+80800,
+81600,
+82000,
+82600,
+83200,
+83400,
+84164,
+88000,
+89600,
+105600,
+126000,
+127800,
+137000,
+170400,
+176000,
+210400,
+844200,
+1200000,
+4320,
+13200,
+13520,
+22000,
+25056,
+25200,
+28000,
+29440,
+33200,
+39360,
+42000,
+44000,
+44400,
+58800,
+59140,
+68824,
+84168,
+88492,
+105600,
+117200,
+136800,
+158400,
+161600,
+163200,
+164000,
+165200,
+166400,
+166800,
+168328,
+176000,
+179200,
+211200,
+252000,
+255600,
+274000,
+340800,
+352000,
+420800,
+1200000,
+1200000,
+1200000,
+1200000,
+1200000,
+1200000,
+1200000,
+1200000,
+1200000
+]
+
+regularFreqs = []
+for i in range(0,128):
+  regularFreqs.append( 440 * pow(2, float(i-69)/12) )
+
+scalaNoteMap = []
+
+for i in range(0,128):
+  closestVal = find_nearest_index(regularFreqs, scalafreqs[i]/100)
+
+  delta = (scalafreqs[i]) - (regularFreqs[closestVal]*100)
+  if closestVal>10:
+	interval = (regularFreqs[closestVal] - regularFreqs[closestVal - 1])
+  else:
+    interval = 1
+
+  scalaNoteMap.append( (closestVal << 7) + (delta / interval) )
+  
+lookup_tables.append(
+  ('scala_map', scalaNoteMap)
+)
+
+

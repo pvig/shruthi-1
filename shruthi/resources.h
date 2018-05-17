@@ -87,6 +87,7 @@ extern const prog_uint16_t lut_res_groove_push[] PROGMEM;
 extern const prog_uint16_t lut_res_groove_lag[] PROGMEM;
 extern const prog_uint16_t lut_res_groove_human[] PROGMEM;
 extern const prog_uint16_t lut_res_groove_monkey[] PROGMEM;
+extern const prog_uint16_t lut_res_scala_map[] PROGMEM;
 extern const prog_uint32_t lut_res_tempo_phase_increment[] PROGMEM;
 extern const prog_uint8_t wav_res_formant_sine[] PROGMEM;
 extern const prog_uint8_t wav_res_formant_square[] PROGMEM;
@@ -564,6 +565,7 @@ extern const prog_uint8_t chr_res_special_characters[] PROGMEM;
 #define STR_RES_KAUSHI 454  // kaushi
 #define STR_RES_JOGESH 455  // jogesh
 #define STR_RES_RASIA 456  // rasia
+#define STR_RES_SCALA 457  // scala
 #define LUT_RES_LFO_INCREMENTS 0
 #define LUT_RES_LFO_INCREMENTS_SIZE 128
 #define LUT_RES_ENV_PORTAMENTO_INCREMENTS 1
@@ -636,20 +638,24 @@ extern const prog_uint8_t chr_res_special_characters[] PROGMEM;
 #define LUT_RES_SCALE_JOGESHWARI_SIZE 12
 #define LUT_RES_SCALE_RASIA 35
 #define LUT_RES_SCALE_RASIA_SIZE 12
-#define LUT_RES_ARPEGGIATOR_PATTERNS 36
+#define LUT_RES_SCALE_SCALA 36
+#define LUT_RES_SCALE_SCALA_SIZE 12
+#define LUT_RES_ARPEGGIATOR_PATTERNS 37
 #define LUT_RES_ARPEGGIATOR_PATTERNS_SIZE 15
-#define LUT_RES_GROOVE_SWING 37
+#define LUT_RES_GROOVE_SWING 38
 #define LUT_RES_GROOVE_SWING_SIZE 16
-#define LUT_RES_GROOVE_SHUFFLE 38
+#define LUT_RES_GROOVE_SHUFFLE 39
 #define LUT_RES_GROOVE_SHUFFLE_SIZE 16
-#define LUT_RES_GROOVE_PUSH 39
+#define LUT_RES_GROOVE_PUSH 40
 #define LUT_RES_GROOVE_PUSH_SIZE 16
-#define LUT_RES_GROOVE_LAG 40
+#define LUT_RES_GROOVE_LAG 41
 #define LUT_RES_GROOVE_LAG_SIZE 16
-#define LUT_RES_GROOVE_HUMAN 41
+#define LUT_RES_GROOVE_HUMAN 42
 #define LUT_RES_GROOVE_HUMAN_SIZE 16
-#define LUT_RES_GROOVE_MONKEY 42
+#define LUT_RES_GROOVE_MONKEY 43
 #define LUT_RES_GROOVE_MONKEY_SIZE 16
+#define LUT_RES_SCALA_MAP 44
+#define LUT_RES_SCALA_MAP_SIZE 128
 #define LUT_RES_TEMPO_PHASE_INCREMENT 0
 #define LUT_RES_TEMPO_PHASE_INCREMENT_SIZE 201
 #define WAV_RES_FORMANT_SINE 0

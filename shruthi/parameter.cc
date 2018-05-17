@@ -556,7 +556,7 @@ static const prog_Parameter parameters[kNumParameters] PROGMEM = {
   // 45
   { PRM_SYS_RAGA,
     UNIT_RAGA,
-    0, 32,
+    0, 33,
     { 83, 0 },
     STR_RES_RAGA, STR_RES_RAGA }, 
 
